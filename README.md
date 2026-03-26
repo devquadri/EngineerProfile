@@ -32,23 +32,27 @@ Visit the live website: [Your Vercel URL will go here]
 ## 🏃‍♂️ Quick Start
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/portfolio-website.git
 cd portfolio-website
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start development server:
+
 ```bash
 npm run dev
 ```
@@ -83,6 +87,7 @@ portfolio-website/
 ## 📞 Contact
 
 **Mohammed Riyazuddin**
+
 - Email: contact@riyaz.blog
 - Phone: +91 863-922-7538
 - Location: Hyderabad, India
