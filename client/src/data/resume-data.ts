@@ -133,7 +133,7 @@ export const achievements: Achievement[] = [
 export const experiences: Experience[] = [
   {
     company: "Freelance",
-    position: "WordPress/WooCommerce Support Engineer/Developer",
+    position: "WordPress Developer",
     location: "Hyderabad, Remote",
     startDate: "Dec 2025",
     endDate: "Present",
@@ -147,7 +147,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Automattic",
-    position: "Happiness Engineer (Technical Support Engineer)",
+    position: "Happiness Engineer",
     location: "Hyderabad, Remote",
     startDate: "June 2019",
     endDate: "April 2025",
