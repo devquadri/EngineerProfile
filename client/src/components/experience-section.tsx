@@ -1,10 +1,10 @@
-import { experiences } from '@/data/resume-data';
-import { Briefcase, MapPin, Calendar, ChevronRight } from 'lucide-react';
+import { experiences } from "@/data/resume-data";
+import { Briefcase, MapPin, Calendar, ChevronRight } from "lucide-react";
 
 export function ExperienceSection() {
   return (
-    <section 
-      id="experience" 
+    <section
+      id="experience"
       className="py-20 bg-white dark:bg-slate-900"
       data-testid="experience-section"
     >
@@ -14,7 +14,7 @@ export function ExperienceSection() {
             Professional Experience
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Over 15 years of experience in technical support, customer success, and team leadership
+            Over 5 years of experience in technical support
           </p>
         </div>
 
@@ -23,11 +23,11 @@ export function ExperienceSection() {
 
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div 
+              <div
                 key={index}
                 className="relative md:pl-20 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
-                data-testid={`experience-${exp.company.toLowerCase().replace(/\s+/g, '-')}`}
+                data-testid={`experience-${exp.company.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 <div className="absolute left-5 top-8 w-6 h-6 bg-blue-600 rounded-full border-4 border-white dark:border-slate-900 shadow-lg hidden md:flex items-center justify-center">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
@@ -46,7 +46,7 @@ export function ExperienceSection() {
                         </span>
                       </div>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-3">
                       <div className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm">
                         <Calendar className="w-3.5 h-3.5" />
@@ -66,7 +66,10 @@ export function ExperienceSection() {
                   {exp.achievements.length > 0 && (
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start gap-2 text-slate-600 dark:text-slate-300">
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 text-slate-600 dark:text-slate-300"
+                        >
                           <ChevronRight className="w-4 h-4 text-blue-600 flex-shrink-0 mt-1" />
                           <span>{achievement}</span>
                         </li>
@@ -77,7 +80,9 @@ export function ExperienceSection() {
                   {exp.techStack && (
                     <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-600">
                       <p className="text-sm text-slate-500 dark:text-slate-400">
-                        <span className="font-semibold text-slate-700 dark:text-slate-300">Tech Stack: </span>
+                        <span className="font-semibold text-slate-700 dark:text-slate-300">
+                          Tech Stack:{" "}
+                        </span>
                         {exp.techStack}
                       </p>
                     </div>
