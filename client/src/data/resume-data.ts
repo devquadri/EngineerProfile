@@ -169,6 +169,7 @@ export const experiences: Experience[] = [
     startDate: "Sep 2016",
     endDate: "Mar 2018",
     description: "Lead a team of L1 and L2 support engineers supporting Teradata products.",
+    achievements: [],
     techStack: "",
   },
   {
@@ -178,6 +179,7 @@ export const experiences: Experience[] = [
     startDate: "August 2005",
     endDate: "September 2016",
     description: "Started as a front line analyst providing IT support and went on to lead a team.",
+    achievements: [],
     techStack: "IT Support, Software/Hardware Troubleshooting, Windows Operatign Systems, Microsoft Office, HR Systems",
   },
 ];
