@@ -8,15 +8,15 @@ import {
   ChevronDown,
   Linkedin,
 } from "lucide-react";
-import profileImage from "../assets/IMG_3687_1766035386404.png";
+import profileImage from "../assets/photo.jpg";
 
 export function HeroSection() {
   const { scrollToElement } = useScroll();
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Mohammed_Riyazuddin_Resume.pdf";
-    link.download = "Mohammed_Riyazuddin_Resume.pdf";
+    link.href = "/resume.pdf";
+    link.download = "resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
