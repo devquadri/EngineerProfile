@@ -158,7 +158,7 @@ export function ContactSection() {
                         GitHub
                       </p>
                       <p className="font-medium text-slate-900 dark:text-white">
-                        View my code
+                        View my profile
                       </p>
                     </div>
                   </a>
