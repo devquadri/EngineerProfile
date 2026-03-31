@@ -18,6 +18,7 @@ export interface ContactInfo {
   location: string;
   linkedin?: string;
   website?: string;
+  github?: string;
 }
 
 export interface ExpertiseArea {
@@ -73,6 +74,7 @@ export const contactInfo: ContactInfo = {
   phone: "+91 863-922-7538",
   location: "Hyderabad, India",
   linkedin: "https://www.linkedin.com/in/mriyazuddin1/",
+  github: "https://github.com/mriyazuddin"
 };
 
 export const professionalSummary = `Experienced Customer Success and Technical Support Engineer with over 5 years of experience helping users build and troubleshoot websites using WordPress, WooCommerce, and custom themes. Skilled at simplifying complex technical issues, writing clear documentation, and delivering outstanding customer experiences that make users feel heard and supported.`;
@@ -124,13 +126,13 @@ export const languages: Language[] = [
 export const achievements: Achievement[] = [
   {
     title: "High-Volume Ticket Resolution",
-    description: "Consistently resolved 500+ tickets/month while maintaining 90%+ CSAT scores",
+    description: "Consistently handled 500+ tickets/month while maintaining 90%+ CSAT scores",
     icon: "ticket",
     metric: "500+",
   },
   {
     title: "Documentation Excellence",
-    description: "Improved user support experience by creating and updating over 100 customer-facing documentation assets within the Documentation Guild",
+    description: "Improved user support experience by creating and updating over 100 customer-facing documentation assets",
     icon: "file-alt",
     metric: "100+",
   },
@@ -207,7 +209,7 @@ export const projects: Project[] = [
     title: "Qaaf Gifts – Founder & Lead Developer (Past Entrepreneurial Venture)",
     category: "WooCommerce Development",
     description: "A former entrepreneurial venture where I built and operated a fully functional WooCommerce storefront for curated Islamic gifts. As the founder and sole developer, I managed the end-to-end technical execution, from setting up secure payment gateways to optimizing the user experience. A major technical highlight of this project was developing and integrating a custom AI chat assistant capable of autonomously resolving routine customer inquiries, featuring a smart fallback routing system that seamlessly transfers complex tickets to a human support agent.",
-    techStack: ["WordPress", "WooCommerce", "CSS", "Payment APIs"],
+    techStack: ["WordPress", "WooCommerce", "CSS", "Payment APIs, AI Chatbot"],
     liveUrl: "https://qaafgifts.com", 
     githubUrl: "#", 
     imagePlaceholder: "bg-blue-100 dark:bg-blue-900/30 text-blue-500",
@@ -218,7 +220,7 @@ export const projects: Project[] = [
     title: "Quality Core Constructions – Corporate Site (Solo Developer Demo)",
     category: "WordPress Development",
     description: "A fully functional corporate demonstration website I designed and developed end-to-end to showcase my capabilities in the real estate and construction sector. Acting as the sole developer, I built a custom lead-generation contact form, interactive project progress tracking displays, and a professional, responsive layout tailored specifically for high-ticket B2B and B2C conversions.",
-    techStack: ["WordPress", "WooCommerce", "PHP", "CSS", "Payment APIs"],
+    techStack: ["WordPress", "CSS"],
     liveUrl: "https://qualitycoreconstructions.com", 
     githubUrl: "#", 
     imagePlaceholder: "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-500",

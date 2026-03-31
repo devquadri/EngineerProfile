@@ -1,6 +1,14 @@
-import { useState } from 'react';
-import { contactInfo, education } from '@/data/resume-data';
-import { Mail, Phone, MapPin, Send, Linkedin, GraduationCap } from 'lucide-react';
+import { useState } from "react";
+import { contactInfo, education } from "@/data/resume-data";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Linkedin,
+  Github,
+  GraduationCap,
+} from "lucide-react";
 
 interface ContactFormData {
   name: string;
@@ -11,31 +19,33 @@ interface ContactFormData {
 
 export function ContactSection() {
   const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const subject = encodeURIComponent(formData.subject || 'Portfolio Contact');
+
+    const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
     );
-    
+
     window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
   };
 
   return (
-    <section 
-      id="contact" 
+    <section
+      id="contact"
       className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950"
       data-testid="contact-section"
     >
@@ -45,7 +55,8 @@ export function ContactSection() {
             Get In Touch
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss opportunities? I'd love to hear from you!
+            Have a project in mind or want to discuss opportunities? I'd love to
+            hear from you!
           </p>
         </div>
 
@@ -55,9 +66,9 @@ export function ContactSection() {
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
                 Contact Information
               </h3>
-              
+
               <div className="space-y-4">
-                <a 
+                <a
                   href={`mailto:${contactInfo.email}`}
                   className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors group"
                   data-testid="contact-email-link"
@@ -66,12 +77,16 @@ export function ContactSection() {
                     <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400">Email</p>
-                    <p className="font-medium text-slate-900 dark:text-white">{contactInfo.email}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">
+                      Email
+                    </p>
+                    <p className="font-medium text-slate-900 dark:text-white">
+                      {contactInfo.email}
+                    </p>
                   </div>
                 </a>
 
-                <a 
+                <a
                   href={`tel:${contactInfo.phone}`}
                   className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors group"
                   data-testid="contact-phone-link"
@@ -80,8 +95,12 @@ export function ContactSection() {
                     <Phone className="w-5 h-5 text-green-600 dark:text-green-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400">Phone</p>
-                    <p className="font-medium text-slate-900 dark:text-white">{contactInfo.phone}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">
+                      Phone
+                    </p>
+                    <p className="font-medium text-slate-900 dark:text-white">
+                      {contactInfo.phone}
+                    </p>
                   </div>
                 </a>
 
@@ -90,13 +109,18 @@ export function ContactSection() {
                     <MapPin className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400">Location</p>
-                    <p className="font-medium text-slate-900 dark:text-white">{contactInfo.location}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">
+                      Location
+                    </p>
+                    <p className="font-medium text-slate-900 dark:text-white">
+                      {contactInfo.location}
+                    </p>
                   </div>
                 </div>
 
+                {/* LinkedIn Link */}
                 {contactInfo.linkedin && (
-                  <a 
+                  <a
                     href={contactInfo.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -107,8 +131,35 @@ export function ContactSection() {
                       <Linkedin className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                     </div>
                     <div>
-                      <p className="text-sm text-slate-500 dark:text-slate-400">LinkedIn</p>
-                      <p className="font-medium text-slate-900 dark:text-white">Connect with me</p>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">
+                        LinkedIn
+                      </p>
+                      <p className="font-medium text-slate-900 dark:text-white">
+                        Connect with me
+                      </p>
+                    </div>
+                  </a>
+                )}
+
+                {/* NEW GitHub Link */}
+                {contactInfo.github && (
+                  <a
+                    href={contactInfo.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors group"
+                    data-testid="contact-github-link"
+                  >
+                    <div className="p-3 bg-slate-200 dark:bg-slate-700 rounded-lg group-hover:bg-slate-300 dark:group-hover:bg-slate-600 transition-colors">
+                      <Github className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">
+                        GitHub
+                      </p>
+                      <p className="font-medium text-slate-900 dark:text-white">
+                        View my code
+                      </p>
                     </div>
                   </a>
                 )}
@@ -124,18 +175,30 @@ export function ContactSection() {
                   Education
                 </h3>
               </div>
-              <p className="font-semibold text-slate-900 dark:text-white">{education.degree}</p>
-              <p className="text-slate-600 dark:text-slate-400">{education.institution}</p>
-              <p className="text-sm text-slate-500 dark:text-slate-500">{education.location}</p>
+              <p className="font-semibold text-slate-900 dark:text-white">
+                {education.degree}
+              </p>
+              <p className="text-slate-600 dark:text-slate-400">
+                {education.institution}
+              </p>
+              <p className="text-sm text-slate-500 dark:text-slate-500">
+                {education.location}
+              </p>
             </div>
           </div>
 
-          <div className="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg border border-slate-100 dark:border-slate-700">
+          {/* ADDED: 'h-full flex flex-col' here to make the card stretch */}
+          <div className="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg border border-slate-100 dark:border-slate-700 h-full flex flex-col">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
               Send a Message
             </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
+
+            {/* ADDED: 'flex flex-col flex-grow' here */}
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 flex flex-col flex-grow"
+              data-testid="contact-form"
+            >
               <div>
                 <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                   Your Name
@@ -183,25 +246,28 @@ export function ContactSection() {
                 />
               </div>
 
-              <div>
+              {/* ADDED: 'flex flex-col flex-grow' to the wrapper div */}
+              <div className="flex flex-col flex-grow">
                 <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                   Message
                 </label>
+                {/* ADDED: 'flex-grow' to the textarea classes */}
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none text-slate-900 dark:text-white"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none text-slate-900 dark:text-white flex-grow"
                   placeholder="Tell me about your project..."
                   data-testid="input-message"
                 />
               </div>
 
+              {/* ADDED: 'mt-auto' to push the button to the bottom */}
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl"
+                className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl mt-auto"
                 data-testid="button-submit"
               >
                 <Send className="w-5 h-5" />
