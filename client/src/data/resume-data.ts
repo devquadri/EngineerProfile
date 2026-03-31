@@ -1,3 +1,15 @@
+export interface Project {
+  title: string;
+  category: string;
+  description: string;
+  techStack: string[];
+  liveUrl: string;
+  githubUrl: string;
+  imagePlaceholder: string;
+  icon: string;
+  imageUrl?: string;
+}
+
 export interface ContactInfo {
   name: string;
   title: string;
@@ -190,9 +202,46 @@ export const education: Education = {
   location: "Hyderabad, India",
 };
 
+export const projects: Project[] = [
+  {
+    title: "Qaaf Gifts – Founder & Lead Developer (Past Entrepreneurial Venture)",
+    category: "WooCommerce Development",
+    description: "A former entrepreneurial venture where I built and operated a fully functional WooCommerce storefront for curated Islamic gifts. As the founder and sole developer, I managed the end-to-end technical execution, from setting up secure payment gateways to optimizing the user experience. A major technical highlight of this project was developing and integrating a custom AI chat assistant capable of autonomously resolving routine customer inquiries, featuring a smart fallback routing system that seamlessly transfers complex tickets to a human support agent.",
+    techStack: ["WordPress", "WooCommerce", "CSS", "Payment APIs"],
+    liveUrl: "https://qaafgifts.com", 
+    githubUrl: "#", 
+    imagePlaceholder: "bg-blue-100 dark:bg-blue-900/30 text-blue-500",
+    icon: "layout-template",
+    imageUrl: "/projects/qaaf-gifts.png"
+  },
+  {
+    title: "Quality Core Constructions – Corporate Site (Solo Developer Demo)",
+    category: "WordPress Development",
+    description: "A fully functional corporate demonstration website I designed and developed end-to-end to showcase my capabilities in the real estate and construction sector. Acting as the sole developer, I built a custom lead-generation contact form, interactive project progress tracking displays, and a professional, responsive layout tailored specifically for high-ticket B2B and B2C conversions.",
+    techStack: ["WordPress", "WooCommerce", "PHP", "CSS", "Payment APIs"],
+    liveUrl: "https://qualitycoreconstructions.com", 
+    githubUrl: "#", 
+    imagePlaceholder: "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-500",
+    icon: "code",
+    imageUrl: "/projects/quality-core-constructions.png"
+  },
+  {
+    title: "Bridal Elegance – E-commerce Boutique (Solo Developer Demo)",
+    category: "WooCommerce Development",
+    description: "A premium WooCommerce demo storefront I built entirely from scratch, designed specifically for the luxury ethnic wear market. As the sole architect of this project, I created a highly visual, image-forward layout optimized to showcase designer bridal attire. This project demonstrates my ability to independently deliver high-end, user-friendly shopping experiences that handle complex product variations and secure checkout flows.",
+    techStack: ["WordPress", "WooCommerce", "PHP", "CSS", "Payment APIs"],
+    liveUrl: "https://tmrbusiness2.wpcomstaging.com/", 
+    githubUrl: "#", 
+    imagePlaceholder: "bg-purple-100 dark:bg-purple-900/30 text-purple-500",
+    icon: "code",
+    imageUrl: "/projects/bridal-elegance.png"
+  }
+];
+
 export const navigationLinks = [
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" }, // Added Projects here
   { href: "#skills", label: "Skills" },
   { href: "#achievements", label: "Achievements" },
   { href: "#contact", label: "Contact" },
