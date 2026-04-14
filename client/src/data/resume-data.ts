@@ -206,10 +206,21 @@ export const education: Education = {
 
 export const projects: Project[] = [
   {
-    title: "Qaaf Gifts – Founder & Lead Developer (Past Entrepreneurial Venture)",
+    title: "Nature Life Water – WooCommerce Developer",
     category: "WooCommerce Development",
-    description: "A former entrepreneurial venture where I built and operated a fully functional WooCommerce storefront for curated Islamic gifts. As the founder and sole developer, I managed the end-to-end technical execution, from setting up secure payment gateways to optimizing the user experience. A major technical highlight of this project was developing and integrating a custom AI chat assistant capable of autonomously resolving routine customer inquiries, featuring a smart fallback routing system that seamlessly transfers complex tickets to a human support agent.",
-    techStack: ["WordPress", "WooCommerce", "CSS", "Payment APIs, AI Chatbot"],
+    description: "Designed and developed a WooCommerce-based e-commerce website for a Sierra Leone client. Led the complete store setup, including product creation, tax configuration, shipping logic, and integration of custom payment gateways. Implemented WhatsApp chat integration to enable seamless customer communication and inquiries. Also contributed to the design and development of all key website pages, ensuring a clean, user-friendly experience aligned with the brand.",
+    techStack: ["WordPress", "WooCommerce", "CSS", "Custom Payment Gateways"],
+    liveUrl: "https://naturelifewater.com", 
+    githubUrl: "#", 
+    imagePlaceholder: "bg-blue-100 dark:bg-blue-900/30 text-blue-500",
+    icon: "layout-template",
+    imageUrl: "/projects/qaaf-gifts.png"
+  },
+  {
+    title: "Qaaf Gifts – Lead Developer",
+    category: "WooCommerce Development",
+    description: "A fully functional WooCommerce storefront for curated Islamic gifts. As the sole developer, I managed the end-to-end technical execution, from setting up secure payment gateways to optimizing the user experience. A major technical highlight of this project was developing and integrating a custom AI support assistant that is trained enough to autonomously answer routine customer inquiries, features a smart fallback routing system that allows the AI chat assistant to transfer complex tickets to a human support agent.",
+    techStack: ["WordPress", "WooCommerce", "CSS", "Payment APIs, AI Chat Assistant"],
     liveUrl: "https://qaafgifts.com", 
     githubUrl: "#", 
     imagePlaceholder: "bg-blue-100 dark:bg-blue-900/30 text-blue-500",
