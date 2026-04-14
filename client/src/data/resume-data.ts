@@ -214,13 +214,13 @@ export const projects: Project[] = [
     githubUrl: "#", 
     imagePlaceholder: "bg-blue-100 dark:bg-blue-900/30 text-blue-500",
     icon: "layout-template",
-    imageUrl: "/projects/qaaf-gifts.png"
+    imageUrl: "/projects/nature-life-water.png"
   },
   {
     title: "Qaaf Gifts – Lead Developer",
     category: "WooCommerce Development",
     description: "A fully functional WooCommerce storefront for curated Islamic gifts. As the sole developer, I managed the end-to-end technical execution, from setting up secure payment gateways to optimizing the user experience. A major technical highlight of this project was developing and integrating a custom AI support assistant that is trained enough to autonomously answer routine customer inquiries, features a smart fallback routing system that allows the AI chat assistant to transfer complex tickets to a human support agent.",
-    techStack: ["WordPress", "WooCommerce", "CSS", "Payment APIs, AI Chat Assistant"],
+    techStack: ["WordPress", "WooCommerce", "CSS", "Payment APIs", "AI Chat Assistant"],
     liveUrl: "https://qaafgifts.com", 
     githubUrl: "#", 
     imagePlaceholder: "bg-blue-100 dark:bg-blue-900/30 text-blue-500",
