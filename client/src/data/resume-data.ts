@@ -100,11 +100,10 @@ export const technicalSkills: TechnicalSkill[] = [
   { name: "WP-CLI", level: 85, category: "advanced" },
   { name: "HTML & CSS", level: 90, category: "advanced" },
   { name: "JavaScript", level: 75, category: "intermediate" },
-  { name: "GitHub", level: 80, category: "advanced" },
+  { name: "PHP", level: 60, category: "beginner" },
   { name: "Browser DevTools", level: 90, category: "advanced" },
   { name: "DNS Configuration", level: 90, category: "advanced" },
-  { name: "Zendesk", level: 95, category: "expert" },
-  { name: "Slack & Jira", level: 90, category: "advanced" },
+  { name: "Zendesk", level: 95, category: "expert" },  
   { name: "Microsoft 365 & Google Workspace", level: 90, category: "advanced" },
 ];
 
