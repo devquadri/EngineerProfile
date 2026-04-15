@@ -101,6 +101,7 @@ export const technicalSkills: TechnicalSkill[] = [
   { name: "HTML & CSS", level: 90, category: "advanced" },
   { name: "JavaScript", level: 75, category: "intermediate" },
   { name: "PHP", level: 60, category: "beginner" },
+  { name: "SQL", level: 60, category: "beginner" },
   { name: "Browser DevTools", level: 90, category: "advanced" },
   { name: "DNS Configuration", level: 90, category: "advanced" },
   { name: "Zendesk", level: 95, category: "expert" },  
