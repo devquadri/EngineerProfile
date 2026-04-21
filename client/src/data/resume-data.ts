@@ -95,8 +95,8 @@ export const expertiseAreas: ExpertiseArea[] = [
 ];
 
 export const technicalSkills: TechnicalSkill[] = [
-  { name: "WordPress (core, themes, plugins)", level: 95, category: "expert" },
-  { name: "WooCommerce", level: 95, category: "expert" },
+  { name: "WordPress (core, themes, plugins)", level: 90, category: "advanced" },
+  { name: "WooCommerce", level: 90, category: "advanced" },
   { name: "WP-CLI", level: 85, category: "advanced" },
   { name: "HTML & CSS", level: 90, category: "advanced" },
   { name: "JavaScript", level: 75, category: "intermediate" },
